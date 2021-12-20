@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><title>Translate app English to French</title><body>
+<h2>Translate app (English to French) on GCP Cloud Run using translation api and docker</h2>
+
+{% if trans['text'] %}
+    <h4>Previous translation</h4>
+    <li><b>Original</b>:   {{ orig['text'] }}  (<i>{{ orig['lc'][0] }}</i>)</li>
+    <li><b>Translated</b>: {{ trans['text'] }} (<i>{{ trans['lc'][0] }}</i>)</li>
+{% endif %}
+
+<h4>Enter <i>{{ orig['lc'][1] }}</i> text to translate to <i>{{ trans['lc'][1] }}</i>:</h4>
+<form method="POST"><input name="text"><input type="submit"></form>
+</body></html>
